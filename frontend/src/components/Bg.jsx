@@ -1,4 +1,3 @@
-// src/components/FireworksBackground.jsx
 import React, { useEffect, useRef } from "react";
 
 export default function Bg({
@@ -104,4 +103,5 @@ export default function Bg({
       aria-hidden="true"
     />
   );
+
 }
