@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -73,18 +72,15 @@ export default function Home() {
     return () => { mounted = false; };
   }, [refreshKey]);
 
-  // Retry helper
   const handleRetry = () => {
     setError(null);
     setRefreshKey((k) => k + 1);
   };
 
-  // If loading, show skeleton
   if (loading) {
     return <LoadingScreen />;
   }
 
-  // If there's an error show small error UI with retry (not the full missing list)
   if (error) {
     return (
       <main className="min-h-auto flex items-center justify-center text-white">
@@ -101,12 +97,10 @@ export default function Home() {
     );
   }
 
-  // If required content missing, show the skeleton (UX: don't show admin block)
   if (missing.length > 0) {
     return <LoadingScreen />;
   }
 
-  // All required data exists (settings + home). Use backend values only.
   const primary = settings.primary_color;
   const secondary = settings.secondary_color;
   const roles = Array.isArray(home.roles) ? home.roles.map((r) => r.name) : [];
@@ -176,7 +170,6 @@ export default function Home() {
   );
 }
 
-/* RoleTicker component (driven only by backend roles) */
 function RoleTicker({ roles = [], speed = 70, pause = 1200 }) {
   const [idx, setIdx] = React.useState(0);
   const [sub, setSub] = React.useState(0);
@@ -204,3 +197,4 @@ function RoleTicker({ roles = [], speed = 70, pause = 1200 }) {
   const text = roles[idx].slice(0, Math.max(0, sub));
   return <span className="font-medium">{text}<span className="ml-1" style={{ opacity: blink ? 1 : 0 }}>|</span></span>;
 }
+
