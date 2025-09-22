@@ -75,7 +75,7 @@ export default function ProfileCard({
                 loading="lazy"
               />
 
-{/*               <motion.div
+              {/* <motion.div
                 className="absolute -right-6 -top-6 w-12 h-12 rounded-full opacity-80"
                 initial={{ y: -6, x: 6, scale: 0.9 }}
                 animate={{
@@ -96,4 +96,3 @@ export default function ProfileCard({
     </section>
   );
 }
-
