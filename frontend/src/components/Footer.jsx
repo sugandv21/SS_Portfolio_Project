@@ -34,7 +34,7 @@ export default function Footer() {
 
   return (
     <footer className="fixed bottom-0 left-0 w-full bg-black/90 border-t border-white/10 backdrop-blur-md text-gray-300 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex flex-col items-center gap-4">
+      <div className="max-w-7xl mx-auto px-6 py-2 flex flex-col items-center gap-2">
         
         {/* Brand + Copyright */}
         <div className="text-sm text-gray-400 text-center">
