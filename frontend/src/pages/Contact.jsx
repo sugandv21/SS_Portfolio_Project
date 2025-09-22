@@ -68,7 +68,7 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="px-6 py-3 rounded bg-gradient-to-r from-cyan-400 to-purple-600 text-black font-semibold hover:scale-[1.2] transition-transform"
+          className="px-6 py-2 rounded bg-gradient-to-r from-cyan-400 to-purple-600 text-black font-semibold hover:scale-[1.2] transition-transform"
         >
           Send message
         </button>
