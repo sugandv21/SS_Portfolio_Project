@@ -26,15 +26,24 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
         )
 
         # Thank-you email to sender
-        thanks_subject = "Thanks for reaching out!"
-        thanks_body = f"Hi {instance.name},\n\nThank you for reaching me. I have received your message and will respond soon.\n\nRegards,\n{settings.DEFAULT_FROM_EMAIL}"
-        send_mail(
-            thanks_subject,
-            thanks_body,
-            settings.DEFAULT_FROM_EMAIL,
-            [instance.email],
-            fail_silently=False,
-        )
+       thanks_subject = "Acknowledgment of Your Message"
+thanks_body = f"""Dear {instance.name},
+
+Thank you for contacting me. I have received your message and will respond at the earliest opportunity.
+
+Kind regards,
+{settings.DEFAULT_FROM_EMAIL}
+Python Full Stack Developer, Madurai
+"""
+
+send_mail(
+    thanks_subject,
+    thanks_body,
+    settings.DEFAULT_FROM_EMAIL,
+    [instance.email],
+    fail_silently=False,
+)
 
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
