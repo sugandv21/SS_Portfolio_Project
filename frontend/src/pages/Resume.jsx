@@ -1,4 +1,3 @@
-// src/pages/Resume.jsx
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import API from "../api/axios";
@@ -170,3 +169,4 @@ export default function Resume() {
     </main>
   );
 }
+
