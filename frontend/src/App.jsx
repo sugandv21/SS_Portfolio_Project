@@ -13,7 +13,6 @@ export default function App() {
   return (
     <BrowserRouter>
           <div className="min-h-screen bg-black relative">
-        {/* Fireworks background */}
         <Bg shardCount={40} maxSize={60} minSize={20} />
 
         <Navbar />
