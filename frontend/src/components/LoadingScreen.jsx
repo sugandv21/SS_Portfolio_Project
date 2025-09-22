@@ -35,10 +35,8 @@ export default function LoadingScreen() {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
-              {/* glowing border */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 blur-xl opacity-40 animate-pulse" />
-              {/* circle skeleton */}
-              <div className="rounded-full bg-gray-800 h-56 w-56 md:h-72 md:w-72 relative z-10" />
+              <div className="rounded-2xl bg-gray-800 h-56 w-56 md:h-72 md:w-72 relative z-10" />
             </motion.div>
           </div>
         </div>
@@ -63,4 +61,5 @@ export default function LoadingScreen() {
     </main>
   );
 }
+
 
