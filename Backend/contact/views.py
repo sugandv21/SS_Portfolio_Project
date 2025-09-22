@@ -39,7 +39,7 @@ Thank you for contacting me. I have received your message and will respond at th
 
 Kind regards,
 {settings.DEFAULT_FROM_EMAIL}
-Python Full Stack Developer, Madurai
+Python Full Stack Developer
 """
         send_mail(
             thanks_subject,
@@ -51,4 +51,5 @@ Python Full Stack Developer, Madurai
 
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
 
