@@ -33,7 +33,7 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
 
         # Thank-you email to sender
         thanks_subject = "Acknowledgment of Your Message"
-        thanks_body = f"""Dear {instance.name},
+        thanks_body = f"""Hi {instance.name},
 
 Thank you for contacting me. I have received your message and will respond at the earliest opportunity.
 
@@ -51,3 +51,4 @@ Python Full Stack Developer, Madurai
 
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
