@@ -75,7 +75,7 @@ export default function ProfileCard({
                 loading="lazy"
               />
 
-              <motion.div
+{/*               <motion.div
                 className="absolute -right-6 -top-6 w-12 h-12 rounded-full opacity-80"
                 initial={{ y: -6, x: 6, scale: 0.9 }}
                 animate={{
@@ -88,7 +88,7 @@ export default function ProfileCard({
                   background: `radial-gradient(circle at 30% 30%, ${primary}, transparent 40%), radial-gradient(circle at 70% 70%, ${secondary}, transparent 35%)`,
                   boxShadow: `${secondary}33 0 6px 20px`,
                 }}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -96,3 +96,4 @@ export default function ProfileCard({
     </section>
   );
 }
+
