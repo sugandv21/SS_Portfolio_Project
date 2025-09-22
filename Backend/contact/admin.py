@@ -1,4 +1,3 @@
-# contact/admin.py
 from django.contrib import admin
 from .models import ContactMessage
 
@@ -15,3 +14,4 @@ class ContactMessageAdmin(admin.ModelAdmin):
     def preview_message(self, obj):
         return (obj.message[:80] + "...") if obj.message and len(obj.message) > 80 else (obj.message or "")
     preview_message.short_description = "Message preview"
+
