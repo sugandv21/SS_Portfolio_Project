@@ -159,3 +159,15 @@ EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
 
 OWNER_EMAIL = env("OWNER_EMAIL", default=EMAIL_HOST_USER)
+
+
+CORS_ALLOW_CREDENTIALS = True
+
+# Expose headers if needed by client (usually not required)
+# CORS_EXPOSE_HEADERS = ["Content-Type", "Authorization"]
+
+# CSRF trusted origins for Django's CSRF protection (include scheme)
+CSRF_TRUSTED_ORIGINS = [
+    "https://ss-portfolio-project.vercel.app",
+]
+
