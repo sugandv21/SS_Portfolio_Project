@@ -1,4 +1,3 @@
-// src/pages/Work.jsx
 import React, { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -312,3 +311,4 @@ export default function Work() {
     </main>
   );
 }
+
