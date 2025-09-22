@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -204,3 +203,4 @@ function RoleTicker({ roles = [], speed = 70, pause = 1200 }) {
   const text = roles[idx].slice(0, Math.max(0, sub));
   return <span className="font-medium">{text}<span className="ml-1" style={{ opacity: blink ? 1 : 0 }}>|</span></span>;
 }
+
