@@ -81,6 +81,7 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  
     "http://127.0.0.1:5173",
+    "https://ss-portfolio-project.vercel.app",
 ]
 
 REST_FRAMEWORK = {
@@ -156,4 +157,5 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
 OWNER_EMAIL = env("OWNER_EMAIL", default=EMAIL_HOST_USER)
