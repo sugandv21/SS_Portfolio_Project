@@ -24,7 +24,6 @@ textarea, input {
   cursor: text;
 }
 
-/* App-wide fancy cursor */
 .app-root {
   cursor: grab;
 }
